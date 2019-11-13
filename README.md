@@ -8,12 +8,14 @@ import axios from 'axios'
 
 let pathToRawFile = 'https://raw.githubusercontent.com/standardize-network/stake-pool-names/master/stake-pools-official-nightly.json';
 
-function getPoolnames() {
+function getPoolNames() {
   let poolNames = await axios.get(pathToRawFile, {
     headers: {
       'Content-Type': 'application/json'
     }
   });
   console.log(poolNames.data);
-}
+};
+
+getPoolNames();
 ```
